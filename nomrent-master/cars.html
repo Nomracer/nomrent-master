@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Cars</title>
+
+	<meta charset="utf-8" />
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/sidebar.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jPushMenu.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
+
+	<script type="text/javascript">
+		$(window).load(function () {
+			$(".loader").fadeOut("slow");
+		})
+	</script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+	<div class="loader"></div>
+
+	<style>
+		.loader {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			z-index: 9999;
+			background: url('images/page-loader.gif') 50% 50% no-repeat rgb(249, 249, 249);
+		}
+	</style>
+
+	<header>
+		<nav class="navbar-default navbar-static-top" id="navbar-default" style="border-radius:0;">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle toggle-menu menu-left push-body" data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"></a>
+				</div>
+
+				<div class="collapse navbar-collapse cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left"
+					id="bs-example-navbar-collapse-1">
+
+					<ul class="nav navbar-nav">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="sub.html">Car Subscription Services</a></li>
+						<li><a href="cars.html"><span>Cars</span></a></li>
+						<li><a href="sign-in.html">Sign Up</a></li>
+						<li><a href="contact.html">Rent</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<style>
+			.navbar-default {
+				background: #ffffff;
+			}
+
+			.navbar-default .navbar-nav li a {
+				color: #000;
+			}
+
+			.navbar-default .navbar-toggle .icon-bar {
+				background: #000;
+			}
+
+			@media screen and (max-width: 768px) {
+				.navbar-nav {
+					float: left;
+				}
+			}
+		</style>
+
+
+	</header>
+
+
+	<div class="container">
+		<ul class="breadcrumb">
+			<li><a href="index.html">Home</a> <span class="divider">/</span></li>
+			<li class="active">Cars</li>
+		</ul>
+	</div>
+
+	<div class="about-info">
+		<div class="container">
+			<div class="col-md-6">
+				<div class="image">
+					<img src="images/letsdeal.jpg" class="img-responsive">
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="text">
+					<h3>Lets Deal!</h3>
+					<p>Lorem ipsum dolor sit amet, ei qui suscipit salutatus, ex sed sint suavitate. Cu vel vivendum
+						facilisi intellegam, te quo mazim doctus ocurreret, no mei iusto vituperata. Eam mutat paulo
+						nullam ea, ea partem iisque labores vim, ei est eripuit deserunt percipitur. Nec et vitae
+						efficiantur, at ius nobis neglegentur. Mei vidit convenire ad, convenire comprehensam vel ne.
+					</p>
+					<p>Sit vide deleniti an, no mel justo putent. Te sea aperiam constituam, mea ex nihil ocurreret
+						referrentur. Ei cum novum alienum reformidans, mel appareat referrentur id. Has ne tale
+						repudiare philosophia. Vim at quas decore, ex nec ponderum adolescens inciderint.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="team">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="col-lg-12">
+						<h6 class="description">OUR CARS</h6>
+						<div class="row pt-md" id="allCars">
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
+								<div class="img-box">
+									<img src="images/car1.jpg" class="img-responsive">
+									<ul class="text-center">
+										<li onclick="location.href='contact.html'" ;><i class="fa fa-shopping-cart"></i>
+										</li>
+
+										<li><i class="fa fa-bookmark"></i></li>
+
+
+										<li><i class="fa fa-check"></i></li>
+
+									</ul>
+								</div>
+								<h1>Mustang</h1>
+								<h2>Sports</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
+								<div class="img-box">
+									<img src="images/car2.jpg" class="img-responsive">
+									<ul class="text-center">
+
+										<li id="rentCar"><i class="fa fa-shopping-cart"></i></li>
+
+
+										<li><i class="fa fa-bookmark"></i></li>
+
+
+										<li><i class="fa fa-check"></i></li>
+
+									</ul>
+								</div>
+								<h1>Tesla Roadster</h1>
+								<h2>Sport Car</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
+								<div class="img-box">
+									<img src="images/car3.webp" class="img-responsive">
+									<ul class="text-center">
+
+										<li id="rentCar"><i class="fa fa-shopping-cart"></i></li>
+
+
+										<li><i class="fa fa-bookmark"></i></li>
+
+
+										<li><i class="fa fa-check"></i></li>
+
+									</ul>
+								</div>
+								<h1>Honda</h1>
+								<h2>SUV</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
+								<div class="img-box">
+									<img src="images/car4.jpg" class="img-responsive">
+									<ul class="text-center">
+
+										<li id="rentCar"><i class="fa fa-shopping-cart"></i></li>
+
+
+										<li><i class="fa fa-bookmark"></i></li>
+
+										<li><i class="fa fa-check"></i></li>
+
+									</ul>
+								</div>
+								<h1>2019 Mazda CX-5</h1>
+								<h2>SUV</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
+								<div class="img-box">
+									<img src="images/car5.png" class="img-responsive">
+									<ul class="text-center">
+
+										<li id="rentCar"><i class="fa fa-shopping-cart"></i></li>
+
+
+										<li><i class="fa fa-bookmark"></i></li>
+
+										<li><i class="fa fa-check"></i></li>
+
+									</ul>
+								</div>
+								<h1>2023 KIA SORENTO</h1>
+								<h2>SUV</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
+								<div class="img-box">
+									<img src="images/car6.jpg" class="img-responsive">
+									<ul class="text-center">
+
+										<li id="rentCar"><i class="fa fa-shopping-cart"></i></li>
+
+
+										<li><i class="fa fa-bookmark"></i></li>
+
+										<li><i class="fa fa-check"></i></li>
+
+									</ul>
+								</div>
+								<h1>Fiat</h1>
+								<h2>SUV</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="col-md-4 col-sm-6">
+					<h3>Contrast</h3>
+					<hr>
+					<p>Lorem ipsum dolor sit amet, qui facilis epicuri at. Vis quando timeam ex, alia natum ut vix. At
+						alii eros commune ius, discere nominati usu in, te vis dictas dolorum facilisi. Ei his semper
+						laoreet suscipiantur.</p>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<h3>About Us</h3>
+					<hr>
+					<p>Etiam admodum qualisque cu nec, autem impedit repudiandae usu ut. Ea platonem abhorreant nam,
+						purto iudico vix et, eu est alia dicant perpetua.</p>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<h3>Contact Info</h3>
+					<hr>
+					<ul class="contact-list">
+						<li>
+							<p>
+								<i class="fa fa-home"></i>
+								Mersin, Mersin No:2
+								Mersin
+							</p>
+							<p>
+								<i class="fa fa-phone"></i>
+								0534 534 53 34
+							</p>
+							<p>
+								<i class="fa fa-envelope-o"></i>
+								nomracerr@gmail.com
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+
+
+		<script type="text/javascript">
+
+			$(document).ready(function () {
+				$('.toggle-menu').jPushMenu({ closeOnClickLink: false });
+				$('.dropdown-toggle').dropdown();
+			});
+
+		</script>
+
+		<script type="module">
+
+
+			// Import the functions you need from the SDKs you need
+			import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+			import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js";
+			import { getDatabase, update, set, ref, push, child, onValue, get, remove } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js";
+			import { getAuth, signOut, signInWithEmailAndPassword, createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithPopup, signInWithRedirect, getRedirectResult, GoogleAuthProvider, TwitterAuthProvider } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
+			// TODO: Add SDKs for Firebase products that you want to use
+			// https://firebase.google.com/docs/web/setup#available-libraries
+
+			// Your web app's Firebase configuration
+			// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+			const firebaseConfig = {
+				apiKey: "AIzaSyB6A4sYc9oPAbM8C41cIMdpUkVs7eskobM",
+				authDomain: "officialnomrent.firebaseapp.com",
+				databaseURL: "https://officialnomrent-default-rtdb.europe-west1.firebasedatabase.app/",
+				projectId: "officialnomrent",
+				storageBucket: "officialnomrent.appspot.com",
+				messagingSenderId: "10425662484",
+				appId: "1:10425662484:web:1370d81c65fcd2808cfb01",
+				measurementId: "G-NPGFHN12WG"
+			};
+
+
+			// Initialize Firebase
+			const app = initializeApp(firebaseConfig);
+			const auth = getAuth(app);
+			const database = getDatabase(app);
+			const dbRef = ref(database, 'Cars/');
+
+
+			onValue(dbRef, (snapshot) => {
+				snapshot.forEach((childSnapshot) => {
+					const childKey = childSnapshot.key;
+					const childData = childSnapshot.val();
+					const carList = document.getElementById("allCars");
+
+					carList.innerHTML += `
+					 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
+								<div class="img-box">
+									<img src="${childData.CarURL}" class="img-responsive">
+									<ul class="text-center">
+
+										<li><i class="fa fa-shopping-cart" id="rentCar" data-carid="${childKey}"></i></li>
+										
+
+										<li><i class="fa fa-bookmark"></i></li>
+
+										<li><i class="fa fa-check"></i></li>
+
+									</ul>
+								</div>
+								<h1>${childData.CarName}</h1>
+								<h2>${childData.CarCategoryType}</h2>
+								<p>${childData.CarDescription}</p>
+							</div>   `
+
+					
+
+
+
+					//console.log(childData.price + childData. url + childData.title);
+				});
+			}, {
+				onlyOnce: true
+			});
+
+			$("body").on("click", "#rentCar", function () {
+
+				var $keyCar = $(this).data("carid");
+				window.localStorage.setItem("carid", $keyCar);
+
+				console.log($keyCar)
+				location.href = 'contact.html';
+
+			});
+		</script>
+
+
+
+		<script type="text/javascript">
+
+			$(function () {
+				$.scrollUp({
+					scrollName: 'scrollUp', // Element ID
+					topDistance: '300', // Distance from top before showing element (px)
+					topSpeed: 600, // Speed back to top (ms)
+					animation: 'fade', // Fade, slide, none
+					animationInSpeed: 200, // Animation in speed (ms)
+					animationOutSpeed: 200, // Animation out speed (ms)
+					activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+					scrollImg: true,
+				});
+			});
+
+
+		</script>
+</body>
+
+</html>
