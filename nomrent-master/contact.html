@@ -24,9 +24,9 @@
 
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js%22%3E"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js%22%3E"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
 	<script type="text/javascript">
 		$(window).load(function () {
@@ -138,7 +138,7 @@
 
 			</div>
 
-			<input type="text" name="daterange" value="06/02/2023 - 06/02/2023"/>
+			<input type="text" name="daterange" value="06/02/2023 - 06/02/2023" />
 
 
 
@@ -168,7 +168,7 @@
 							<input id="email" name="email" type="text" placeholder="Email" required>
 							<input id="subject" name="subject" type="text" placeholder="TC Identity No" required>
 							<textarea id="message" name="message" placeholder="Your Message"></textarea>
-							<button name="submit" id="submit" type="submit">Pay!</button>
+							<button onclick="lastAlert()" name="submit" id="submit" type="submit">Pay!</button>
 						</form>
 					</div>
 				</div>
@@ -186,12 +186,15 @@
 				<div class="col-md-4 col-sm-6">
 					<h3>Contrast</h3>
 					<hr>
-					<p>Lorem ipsum dolor sit amet, qui facilis epicuri at. Vis quando timeam ex, alia natum ut vix. At alii eros commune ius, discere nominati usu in, te vis dictas dolorum facilisi. Ei his semper laoreet suscipiantur.</p>
+					<p>Lorem ipsum dolor sit amet, qui facilis epicuri at. Vis quando timeam ex, alia natum ut vix. At
+						alii eros commune ius, discere nominati usu in, te vis dictas dolorum facilisi. Ei his semper
+						laoreet suscipiantur.</p>
 				</div>
 				<div class="col-md-4 col-sm-6">
 					<h3>About Us</h3>
 					<hr>
-					<p>Etiam admodum qualisque cu nec, autem impedit repudiandae usu ut. Ea platonem abhorreant nam, purto iudico vix et, eu est alia dicant perpetua.</p>
+					<p>Etiam admodum qualisque cu nec, autem impedit repudiandae usu ut. Ea platonem abhorreant nam,
+						purto iudico vix et, eu est alia dicant perpetua.</p>
 				</div>
 				<div class="col-md-4 col-sm-6">
 					<h3>Contact Info</h3>
@@ -259,6 +262,10 @@
 			const database = getDatabase(app);
 			const dbRef = ref(database, 'Cars/');
 
+			function lastAlert() {
+				alert("Your paymment has reached to us! Thanks for subscription")
+				
+			}
 
 			var idCar = window.localStorage.getItem("carid");
 			window.onload = getCars();

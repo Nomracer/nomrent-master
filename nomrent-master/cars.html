@@ -339,28 +339,31 @@
 					const childKey = childSnapshot.key;
 					const childData = childSnapshot.val();
 					const carList = document.getElementById("allCars");
+					const CarUnit = childData.CarUnit;
+
+					if (CarUnit > 0) {
 
 					carList.innerHTML += `
-					 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
-								<div class="img-box">
-									<img src="${childData.CarURL}" class="img-responsive">
-									<ul class="text-center">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 profile">
+									<div class="img-box">
+										<img src="${childData.CarURL}" class="img-responsive">
+										<ul class="text-center">
 
-										<li><i class="fa fa-shopping-cart" id="rentCar" data-carid="${childKey}"></i></li>
-										
+											<li><i class="fa fa-shopping-cart" id="rentCar" data-carid="${childKey}"></i></li>
+											
 
-										<li><i class="fa fa-bookmark"></i></li>
+											<li><i class="fa fa-bookmark"></i></li>
 
-										<li><i class="fa fa-check"></i></li>
+											<li><i class="fa fa-check"></i></li>
 
-									</ul>
-								</div>
-								<h1>${childData.CarName}</h1>
-								<h2>${childData.CarCategoryType}</h2>
-								<p>${childData.CarDescription}</p>
-							</div>   `
+										</ul>
+									</div>
+									<h1>${childData.CarName}</h1>
+									<h2>${childData.CarCategoryType}</h2>
+									<p>${childData.CarDescription}</p>
+								</div>   `
 
-					
+						}
 
 
 
