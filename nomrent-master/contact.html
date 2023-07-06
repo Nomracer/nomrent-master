@@ -163,13 +163,13 @@
 					<div class="contact-form">
 						<h3>Rent Form</h3>
 						<hr>
-						<form action="#" method="post">
+						<div>
 							<input id="name" name="name" type="text" placeholder="Full Name" required>
 							<input id="email" name="email" type="text" placeholder="Email" required>
 							<input id="subject" name="subject" type="text" placeholder="TC Identity No" required>
 							<textarea id="message" name="message" placeholder="Your Message"></textarea>
-							<button onclick="lastAlert()" name="submit" id="submit" type="submit">Pay!</button>
-						</form>
+							<button id="submit" name="submit" type="button">Pay!</button>
+						</div>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -261,13 +261,12 @@
 			const auth = getAuth(app);
 			const database = getDatabase(app);
 			const dbRef = ref(database, 'Cars/');
-
-			function lastAlert() {
-				alert("Your paymment has reached to us! Thanks for subscription")
-				
-			}
-
 			var idCar = window.localStorage.getItem("carid");
+
+			submit.addEventListener('click', (e) => {
+				alert("Your asddsa")
+				update(ref(database, 'Cars/' + idCar + '/'), { CarUnit: 0 });
+			})
 			window.onload = getCars();
 			function getCars() {
 
