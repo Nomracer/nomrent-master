@@ -69,9 +69,10 @@
                     <ul class="nav navbar-nav">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="sub.html">Car Subscription Services</a></li>
-                        <li><a href="cars.html"><span>Cars</span></a></li>
+                        <li><a href="cars.html">Cars</a></li>
                         <li><a href="sign-in.html">Sign Up</a></li>
                         <li><a href="contact.html">Rent</a></li>
+                        <li><a href="Car_management.html"><span>Adminastor</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -111,6 +112,7 @@
     </header>
 
 <p>https://www.inwheeltime.com/wp-content/uploads/2019/04/3-300x350.jpeg</p>
+<p>https://dubaimusclecar.com/wp-content/uploads/2023/06/FRONT-119.png</p>
     <div class="container">
         <ul class="breadcrumb">
             <li><a href="index.html">Home</a> <span class="divider">/</span></li>
@@ -125,6 +127,7 @@
         <input type="text" placeholder="Category" id="category">
         <input type="text" placeholder="Description For Car" id="description">
         <input type="text" placeholder="Car URL" id="carsurl">
+        <input type="text" placeholder="Car Unit" id="carunit">
         <div class="adminbuttons">
             <button id="btnAdd">Add Car</button>
             <button id="btnGet">Get Car</button>
@@ -174,6 +177,7 @@
             var description = document.getElementById('description').value;
             var carsurl = document.getElementById('carsurl').value;
             var category = document.getElementById('category').value;
+            var carunit = document.getElementById('carunit').value;
 
             //var CarImageName = document.getElementById('CarImageName').value;
             //var CarImage = document.getElementById('CarImage').value;
@@ -185,7 +189,8 @@
                 CarName: CarName,
                 CarURL: carsurl,
                 CarDescription: description,
-                CarCategoryType: category
+                CarCategoryType: category,
+                CarUnit: carunit
 
 
             });
@@ -212,7 +217,9 @@
                 document.getElementById('category').value = data.CarCategoryType;
                 document.getElementById('description').value = data.CarDescription;
                 document.getElementById('carsurl').value = data.CarURL;
-
+                document.getElementById('carunit').value = data.CarUnit;
+                
+                
             })
 
             alert('Successfuly Got Car Data')
@@ -224,13 +231,15 @@
             var description = document.getElementById('description').value;
             var carsurl = document.getElementById('carsurl').value;
             var category = document.getElementById('category').value;
+            var carunit = document.getElementById('carunit').value;
 
             update(ref(database, 'Cars/' + CarID), {
                 CarID: CarID,
                 CarName: CarName,
                 CarURL: carsurl,
                 CarDescription: description,
-                CarCategoryType: category
+                CarCategoryType: category,
+                CarUnit: carunit
 
             })
             alert('Data Updated');
